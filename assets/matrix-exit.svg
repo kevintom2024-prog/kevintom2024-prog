@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
+  <title id="title">Matrix exit signal</title>
+  <desc id="description">An animated wireframe telephone emits expanding signal rings while a terminal reports that the connection remains open.</desc>
+
+  <style>
+    .ring-1 { animation: ring 3s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+    .ring-2 { animation: ring 3s ease-out -1s infinite; transform-box: fill-box; transform-origin: center; }
+    .ring-3 { animation: ring 3s ease-out -2s infinite; transform-box: fill-box; transform-origin: center; }
+    .phone { animation: phone 4s ease-in-out infinite; }
+    .signal { animation: signal 2s linear infinite; }
+    .cursor { animation: blink 1s steps(1,end) infinite; }
+    .rain { animation: fall 8s linear infinite; }
+    .rain-b { animation: fall 10s linear -5s infinite; }
+
+    @keyframes ring {
+      from { transform: scale(.35); opacity: .9; }
+      to { transform: scale(1.7); opacity: 0; }
+    }
+    @keyframes phone {
+      0%, 93%, 100% { transform: rotate(0); }
+      95% { transform: rotate(-2deg); }
+      97% { transform: rotate(2deg); }
+      99% { transform: rotate(-1deg); }
+    }
+    @keyframes signal { to { stroke-dashoffset: -40; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes fall {
+      from { transform: translateY(-260px); opacity: 0; }
+      10% { opacity: .55; }
+      85% { opacity: .25; }
+      to { transform: translateY(360px); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#000"/><stop offset=".5" stop-color="#07130A"/><stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#7CFF8A" stop-opacity=".3"/><stop offset="1" stop-color="#7CFF8A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#7CFF8A" stroke-opacity=".03"/>
+    </pattern>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip"><rect width="1200" height="300" rx="22"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="300" fill="url(#bg)"/>
+    <rect width="1200" height="300" fill="url(#grid)"/>
+
+    <g fill="#7CFF8A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" opacity=".34">
+      <g class="rain">
+        <text x="38" y="20">ｱ01ﾈ</text><text x="38" y="44">1ｼﾅ0</text><text x="38" y="68">ﾐ01ﾒ</text><text x="38" y="92">10ﾓ1</text><text x="38" y="116">ｶ0ﾊ1</text>
+      </g>
+      <g class="rain-b">
+        <text x="1100" y="20">ﾘ0ﾖ1</text><text x="1100" y="44">1ﾆ0ｵ</text><text x="1100" y="68">ﾜ1ﾃ0</text><text x="1100" y="92">1ﾋ0ﾌ</text><text x="1100" y="116">ｺ10ｻ</text>
+      </g>
+    </g>
+
+    <!-- Signal rings -->
+    <g transform="translate(290 150)" fill="none" stroke="#7CFF8A">
+      <circle class="ring-1" r="72" opacity=".6"/>
+      <circle class="ring-2" r="72" opacity=".6"/>
+      <circle class="ring-3" r="72" opacity=".6"/>
+      <circle r="104" fill="url(#glow)" stroke="none"/>
+    </g>
+
+    <!-- Wireframe telephone -->
+    <g transform="translate(290 150)">
+      <g class="phone" fill="#071009" stroke="#7CFF8A" stroke-width="2" filter="url(#softGlow)">
+        <path d="M-74-14Q-58-72-34-79H34Q58-72 74-14L54 0Q36-37 25-42H-25Q-36-37-54 0Z"/>
+        <rect x="-51" y="5" width="102" height="70" rx="12"/>
+        <circle cx="0" cy="40" r="23"/>
+        <circle cx="0" cy="40" r="6" fill="#7CFF8A"/>
+      </g>
+    </g>
+
+    <path class="signal" d="M398 150H720" fill="none" stroke="#7CFF8A" stroke-width="2" stroke-dasharray="9 11"/>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      <text x="760" y="98" fill="#63806A" font-size="13">$ locate --exit-node</text>
+      <text x="760" y="137" fill="#F5FFF7" font-size="25">SIGNAL FOUND</text>
+      <text x="760" y="176" fill="#7CFF8A" font-size="20" filter="url(#softGlow)">CONNECTION OPEN</text>
+      <rect class="cursor" x="760" y="202" width="11" height="20" fill="#7CFF8A"/>
+      <text x="783" y="218" fill="#8FA795" font-size="13">open to backend / DevOps opportunities</text>
+    </g>
+
+    <path d="M1 22V1H22M1178 1H1199V22M1 278V299H22M1178 299H1199V278" fill="none" stroke="#7CFF8A" stroke-width="2"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="298" rx="21" fill="none" stroke="#2A5B36" stroke-width="2"/>
+</svg>

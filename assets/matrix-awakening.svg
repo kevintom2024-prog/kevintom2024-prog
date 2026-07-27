@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title description">
+  <title id="title">Wake up, Kevin — cinematic Matrix profile introduction</title>
+  <desc id="description">A cinematic animated sequence of dense green digital rain, terminal messages, a glowing portal, and red and blue choice capsules.</desc>
+
+  <style>
+    .rain-1 { animation: fall 6s linear infinite; }
+    .rain-2 { animation: fall 8s linear -5s infinite; }
+    .rain-3 { animation: fall 10s linear -2s infinite; }
+    .rain-4 { animation: fall 7s linear -4s infinite; }
+    .rain-5 { animation: fall 12s linear -8s infinite; }
+    .rain-6 { animation: fall 9s linear -6s infinite; }
+    .story-1 { animation: story1 16s ease-in-out infinite; }
+    .story-2 { animation: story2 16s ease-in-out infinite; }
+    .story-3 { animation: story3 16s ease-in-out infinite; }
+    .story-4 { animation: story4 16s ease-in-out infinite; }
+    .cursor { animation: blink 1s steps(1,end) infinite; }
+    .scan { animation: scan 5s linear infinite; }
+    .portal-a { animation: portalA 7s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .portal-b { animation: portalB 5s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .door { animation: door 4s ease-in-out infinite; }
+    .pill-red { animation: redPulse 3s ease-in-out infinite; }
+    .pill-blue { animation: bluePulse 3s ease-in-out -1.5s infinite; }
+    .path-line { animation: pathFlow 2s linear infinite; }
+    .flicker { animation: flicker 8s steps(1,end) infinite; }
+
+    @keyframes fall {
+      from { transform: translateY(-700px); opacity: 0; }
+      6% { opacity: .72; }
+      86% { opacity: .42; }
+      to { transform: translateY(720px); opacity: 0; }
+    }
+    @keyframes story1 {
+      0%, 3% { opacity: 0; transform: translateY(12px); }
+      7%, 19% { opacity: 1; transform: translateY(0); }
+      23%, 100% { opacity: 0; transform: translateY(-12px); }
+    }
+    @keyframes story2 {
+      0%, 21% { opacity: 0; transform: translateY(12px); }
+      26%, 39% { opacity: 1; transform: translateY(0); }
+      44%, 100% { opacity: 0; transform: translateY(-12px); }
+    }
+    @keyframes story3 {
+      0%, 42% { opacity: 0; transform: translateY(12px); }
+      47%, 59% { opacity: 1; transform: translateY(0); }
+      64%, 100% { opacity: 0; transform: translateY(-12px); }
+    }
+    @keyframes story4 {
+      0%, 62% { opacity: 0; transform: translateY(14px); }
+      68%, 94% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-8px); }
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes scan {
+      from { transform: translateY(-90px); }
+      to { transform: translateY(710px); }
+    }
+    @keyframes portalA { to { transform: rotate(360deg); } }
+    @keyframes portalB { to { transform: rotate(-360deg); } }
+    @keyframes door {
+      0%, 100% { opacity: .4; filter: drop-shadow(0 0 6px #7CFF8A); }
+      50% { opacity: 1; filter: drop-shadow(0 0 24px #7CFF8A); }
+    }
+    @keyframes redPulse {
+      0%, 100% { opacity: .58; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-4px); filter: drop-shadow(0 0 10px #ff315a); }
+    }
+    @keyframes bluePulse {
+      0%, 100% { opacity: .58; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-4px); filter: drop-shadow(0 0 10px #22d3ee); }
+    }
+    @keyframes pathFlow { to { stroke-dashoffset: -36; } }
+    @keyframes flicker {
+      0%, 87%, 90%, 92%, 100% { opacity: 1; }
+      88%, 91% { opacity: .18; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .story-1, .story-2, .story-3 { display: none; }
+      .story-4 { opacity: 1; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".58" stop-color="#020704"/>
+      <stop offset="1" stop-color="#07130A"/>
+    </linearGradient>
+    <radialGradient id="portalGlow">
+      <stop offset="0" stop-color="#BFFFCA" stop-opacity=".8"/>
+      <stop offset=".18" stop-color="#53FF6B" stop-opacity=".35"/>
+      <stop offset=".58" stop-color="#20C942" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#20C942" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="redPill" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FF7891"/><stop offset=".5" stop-color="#E11742"/><stop offset="1" stop-color="#590717"/>
+    </linearGradient>
+    <linearGradient id="bluePill" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#83E8FF"/><stop offset=".5" stop-color="#079CC1"/><stop offset="1" stop-color="#053449"/>
+    </linearGradient>
+    <linearGradient id="scanGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#7CFF8A" stop-opacity="0"/>
+      <stop offset=".48" stop-color="#7CFF8A" stop-opacity=".03"/>
+      <stop offset=".5" stop-color="#C8FFCE" stop-opacity=".24"/>
+      <stop offset=".52" stop-color="#7CFF8A" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#7CFF8A" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M0 1.5H1200" stroke="#B8FFBF" stroke-opacity=".025"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="deepGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <symbol id="codeColumn">
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+        <text y="0">ｱ 0 ﾈ</text><text y="24">1 ｼ ﾅ</text><text y="48">ﾐ 0 1</text><text y="72">1 ﾒ 0</text>
+        <text y="96">ﾓ 1 ｶ</text><text y="120">0 ﾊ 1</text><text y="144">ﾏ 0 ｷ</text><text y="168">1 ﾗ 0</text>
+        <text y="192">ｻ 1 ﾂ</text><text y="216">0 ｹ 1</text><text y="240">ﾘ 0 ﾖ</text><text y="264">1 ﾆ 0</text>
+        <text y="288">ｵ 1 ﾜ</text><text y="312">0 ﾃ 1</text><text y="336">ﾋ 0 ﾌ</text><text y="360">1 ｺ 0</text>
+      </g>
+    </symbol>
+    <clipPath id="clip"><rect width="1200" height="620" rx="22"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="620" fill="url(#bg)"/>
+
+    <!-- Dense digital rain -->
+    <g fill="#7CFF8A">
+      <use href="#codeColumn" x="18" class="rain-1" opacity=".45"/>
+      <use href="#codeColumn" x="74" class="rain-3" opacity=".28"/>
+      <use href="#codeColumn" x="132" class="rain-5" opacity=".4"/>
+      <use href="#codeColumn" x="190" class="rain-2" opacity=".3"/>
+      <use href="#codeColumn" x="248" class="rain-4" opacity=".5"/>
+      <use href="#codeColumn" x="306" class="rain-6" opacity=".24"/>
+      <use href="#codeColumn" x="364" class="rain-1" opacity=".42"/>
+      <use href="#codeColumn" x="422" class="rain-5" opacity=".26"/>
+      <use href="#codeColumn" x="480" class="rain-3" opacity=".44"/>
+      <use href="#codeColumn" x="538" class="rain-2" opacity=".22"/>
+      <use href="#codeColumn" x="596" class="rain-6" opacity=".4"/>
+      <use href="#codeColumn" x="654" class="rain-4" opacity=".28"/>
+      <use href="#codeColumn" x="712" class="rain-1" opacity=".46"/>
+      <use href="#codeColumn" x="770" class="rain-5" opacity=".22"/>
+      <use href="#codeColumn" x="828" class="rain-3" opacity=".38"/>
+      <use href="#codeColumn" x="886" class="rain-2" opacity=".48"/>
+      <use href="#codeColumn" x="944" class="rain-6" opacity=".25"/>
+      <use href="#codeColumn" x="1002" class="rain-4" opacity=".44"/>
+      <use href="#codeColumn" x="1060" class="rain-1" opacity=".29"/>
+      <use href="#codeColumn" x="1118" class="rain-5" opacity=".48"/>
+      <use href="#codeColumn" x="1172" class="rain-3" opacity=".32"/>
+    </g>
+
+    <rect x="150" y="102" width="900" height="340" rx="8" fill="#000" fill-opacity=".76" stroke="#2A5B36"/>
+    <path d="M150 136H1050" stroke="#21422A"/>
+    <circle cx="174" cy="120" r="5" fill="#F05D5E"/>
+    <circle cx="192" cy="120" r="5" fill="#F2C14E"/>
+    <circle cx="210" cy="120" r="5" fill="#31C763"/>
+    <text x="232" y="125" fill="#63806A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">construct://matrix/awakening</text>
+
+    <!-- Cinematic message sequence -->
+    <g class="flicker" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      <g class="story-1">
+        <text x="600" y="250" fill="#7CFF8A" font-size="34" filter="url(#glow)">WAKE UP, KEVIN...</text>
+        <rect class="cursor" x="782" y="220" width="15" height="38" fill="#7CFF8A"/>
+      </g>
+      <g class="story-2" opacity="0">
+        <text x="600" y="250" fill="#7CFF8A" font-size="34" filter="url(#glow)">THE MATRIX HAS YOU.</text>
+      </g>
+      <g class="story-3" opacity="0">
+        <text x="600" y="250" fill="#F5FFF7" font-size="38" filter="url(#glow)">FOLLOW THE SIGNAL.</text>
+        <text x="600" y="292" fill="#6A8A70" font-size="14">TRACE: JAVA → CLOUD → AUTOMATION</text>
+      </g>
+      <g class="story-4" opacity="0">
+        <text x="600" y="228" fill="#F5FFF7" font-size="20">IDENTITY DECRYPTED</text>
+        <text x="600" y="296" fill="#7CFF8A" font-size="58" font-weight="700" letter-spacing="5" filter="url(#glow)">KEVIN TOM</text>
+        <text x="600" y="338" fill="#A8C8AD" font-size="17">JAVA BACKEND // DEVOPS // CLOUD SYSTEMS</text>
+      </g>
+    </g>
+
+    <!-- Portal and perspective signal -->
+    <ellipse cx="600" cy="484" rx="260" ry="70" fill="url(#portalGlow)"/>
+    <g transform="translate(600 474)" fill="none">
+      <ellipse class="portal-a" rx="166" ry="35" stroke="#7CFF8A" stroke-dasharray="10 18" opacity=".66"/>
+      <ellipse class="portal-b" rx="125" ry="26" stroke="#31C763" stroke-dasharray="6 14" opacity=".72"/>
+      <path class="door" d="M-34 18V-90Q0-130 34-90V18Z" stroke="#B8FFBF" stroke-width="2"/>
+      <path d="M-25 18V-82Q0-109 25-82V18Z" fill="#7CFF8A" fill-opacity=".08" stroke="#4CF965"/>
+      <path class="path-line" d="M-25 18L-170 120M25 18L170 120M0 18V125" stroke="#7CFF8A" stroke-dasharray="8 10" opacity=".5"/>
+    </g>
+
+    <!-- Choice capsules -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" text-anchor="middle">
+      <g transform="translate(222 523)">
+        <g class="pill-red">
+          <rect x="-44" y="-14" width="88" height="28" rx="14" fill="url(#redPill)" stroke="#FF7891"/>
+          <path d="M0-13V13" stroke="#FFB7C4" opacity=".7"/>
+          <text y="36" fill="#A87A83">SHIP CODE</text>
+        </g>
+      </g>
+      <g transform="translate(978 523)">
+        <g class="pill-blue">
+          <rect x="-44" y="-14" width="88" height="28" rx="14" fill="url(#bluePill)" stroke="#83E8FF"/>
+          <path d="M0-13V13" stroke="#BDEFFF" opacity=".7"/>
+          <text y="36" fill="#739AA3">BUILD SYSTEMS</text>
+        </g>
+      </g>
+    </g>
+
+    <rect class="scan" x="0" y="-90" width="1200" height="90" fill="url(#scanGradient)"/>
+    <rect width="1200" height="620" fill="url(#scanlines)" pointer-events="none"/>
+    <path d="M1 26V1H26M1174 1H1199V26M1 594V619H26M1174 619H1199V594" fill="none" stroke="#7CFF8A" stroke-width="2"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="618" rx="21" fill="none" stroke="#2A5B36" stroke-width="2"/>
+</svg>

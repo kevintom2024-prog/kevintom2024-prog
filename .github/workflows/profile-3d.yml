@@ -1,4 +1,4 @@
-name: Render 3D contribution matrix
+name: Render Matrix profile activity
 
 on:
   schedule:
@@ -9,12 +9,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-3d-render
+  group: matrix-profile-render
   cancel-in-progress: true
 
 jobs:
   render:
-    name: Generate animated 3D contribution calendar
+    name: Generate animated Matrix activity
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       - name: Clear previous generated scene
-        run: rm -rf profile-3d-contrib
+        run: rm -rf profile-3d-contrib dist
 
       - name: Render contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@5b718734e8da645411919f0ae9ab9e7f9377158f # v0.9.2
@@ -32,11 +32,18 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: .github/profile-3d-settings.json
 
+      - name: Render contribution signal
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/matrix-snake.svg?palette=github-dark&color_snake=#7CFF8A&color_dots=#030806,#0B1710,#14351B,#31C763,#7CFF8A
+
       - name: Commit generated artwork
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib
+          git add profile-3d-contrib dist
           if git diff --cached --quiet; then
             exit 0
           fi
