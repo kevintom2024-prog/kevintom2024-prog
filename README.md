@@ -18,7 +18,7 @@ I’m Kevin, a Java backend and DevOps developer focused on turning application 
 ## `> activity_matrix --render=3d`
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional GitHub contribution calendar">
+  <img src="./profile-3d-contrib/profile-matrix-animate.svg" width="100%" alt="Animated Matrix-themed three-dimensional GitHub contribution calendar">
 </p>
 
 ## `> selected_work`

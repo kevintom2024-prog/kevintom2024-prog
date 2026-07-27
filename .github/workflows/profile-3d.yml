@@ -22,11 +22,15 @@ jobs:
       - name: Check out profile repository
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
+      - name: Clear previous generated scene
+        run: rm -rf profile-3d-contrib
+
       - name: Render contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@5b718734e8da645411919f0ae9ab9e7f9377158f # v0.9.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: .github/profile-3d-settings.json
 
       - name: Commit generated artwork
         run: |
