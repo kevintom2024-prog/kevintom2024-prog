@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/matrix-header.svg" width="100%" alt="Kevin Tom — Java backend and DevOps developer building reliable systems">
+  <img src="./assets/matrix-reactor.svg" width="100%" alt="Animated Matrix terminal introducing Kevin Tom as a Java backend and DevOps developer">
 </p>
 
 <p align="center">
@@ -14,6 +14,12 @@ I’m Kevin, a Java backend and DevOps developer focused on turning application 
 - Automating delivery with **Azure Pipelines, Ansible, Linux, and Git**
 - Currently improving my testing, containerization, and cloud deployment workflow
 - Open to **Java Backend, DevOps, and Cloud Engineering** opportunities
+
+## `> activity_matrix --render=3d`
+
+<p align="center">
+  <img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated three-dimensional GitHub contribution calendar">
+</p>
 
 ## `> selected_work`
 
