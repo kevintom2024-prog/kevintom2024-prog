@@ -1,19 +1,32 @@
 <p align="center">
-  <img src="./assets/matrix-reactor.svg" width="100%" alt="Animated Matrix terminal introducing Kevin Tom as a Java backend and DevOps developer">
+  <img src="./assets/matrix-awakening.svg" width="100%" alt="Animated cinematic Matrix-style awakening sequence introducing Kevin Tom">
 </p>
 
 <p align="center">
-  <strong>Java Backend</strong> · <strong>DevOps</strong> · <strong>Cloud Automation</strong>
+  <a href="#-operator_dossier">OPERATOR</a> ·
+  <a href="#-activity_matrix---render3d">ACTIVITY</a> ·
+  <a href="#-selected_program">PROGRAM</a> ·
+  <a href="#-transmission">TRANSMISSION</a>
 </p>
 
-## `> whoami`
+## `> operator_dossier`
+
+<p align="center">
+  <img src="./assets/matrix-reactor.svg" width="100%" alt="Animated Matrix operator console showing Kevin Tom's Java backend and DevOps focus">
+</p>
+
+<details open>
+  <summary><strong>DECRYPTED IDENTITY</strong></summary>
+  <br>
 
 I’m Kevin, a Java backend and DevOps developer focused on turning application code into reliable, repeatable deployments.
 
-- Building with **Java 21, Spring Boot, MySQL, Maven, and REST**
-- Automating delivery with **Azure Pipelines, Ansible, Linux, and Git**
-- Currently improving my testing, containerization, and cloud deployment workflow
-- Open to **Java Backend, DevOps, and Cloud Engineering** opportunities
+- **Runtime:** Java 21 · Spring Boot · REST · JPA · MySQL
+- **Delivery:** Maven · Azure Pipelines · Ansible · Linux · Git
+- **Current training:** Docker · Azure · integration testing
+- **Mission:** Java Backend, DevOps, and Cloud Engineering opportunities
+
+</details>
 
 ## `> activity_matrix --render=3d`
 
@@ -21,34 +34,47 @@ I’m Kevin, a Java backend and DevOps developer focused on turning application 
   <img src="./profile-3d-contrib/profile-matrix-animate.svg" width="100%" alt="Animated Matrix-themed three-dimensional GitHub contribution calendar">
 </p>
 
-## `> selected_work`
+## `> trace_contribution_signal`
 
-### [Student Management Platform](https://github.com/kevintom2024-prog/dev)
+<p align="center">
+  <img src="./dist/matrix-snake.svg" width="100%" alt="Animated neon Matrix snake moving through Kevin's GitHub contribution graph">
+</p>
 
-A learning project that combines a Spring Boot CRUD application with persistence, tests, a CI pipeline, and Ansible-based server configuration.
+## `> selected_program`
+
+<a href="https://github.com/kevintom2024-prog/dev">
+  <img src="./assets/matrix-project-core.svg" width="100%" alt="Animated system architecture for Kevin's Student Management Platform">
+</a>
+
+<details>
+  <summary><strong>OPEN PROJECT FILE</strong></summary>
+  <br>
+
+The **Student Management Platform** is a learning project combining a Spring Boot CRUD application with persistence, tests, an Azure CI pipeline, and Ansible-based server configuration.
 
 `Java 21` `Spring Boot` `JPA` `MySQL` `JUnit` `Azure Pipelines` `Ansible`
 
-## `> engineering_focus`
+[Inspect the source program](https://github.com/kevintom2024-prog/dev)
 
-| Area | What I’m practicing |
-| --- | --- |
-| Backend | API design, persistence, validation, error handling, and tests |
-| Delivery | Reproducible builds, CI checks, deployment automation, and rollback thinking |
-| Operations | Linux administration, configuration management, and observable services |
+</details>
 
-## `> current_signal`
+## `> engineering_directives`
 
 ```text
-learning   Docker · Azure · integration testing
-building   production-shaped Java backend projects
-seeking    backend / DevOps opportunities
+BACKEND     API design · persistence · validation · error handling · tests
+DELIVERY    reproducible builds · CI checks · automation · rollback thinking
+OPERATIONS  Linux administration · configuration management · observability
+STATUS      building production-shaped Java backend systems
 ```
 
----
+## `> transmission`
 
 <p align="center">
-  <sub>Build clearly. Automate carefully. Improve continuously.</sub>
+  <img src="./assets/matrix-exit.svg" width="100%" alt="Animated Matrix exit telephone reporting that Kevin is open to backend and DevOps opportunities">
+</p>
+
+<p align="center">
+  <sub>There is no spoon. There is only the next deployment.</sub>
 </p>
 
 <!-- Add verified LinkedIn, portfolio, and professional email links here when available. -->
